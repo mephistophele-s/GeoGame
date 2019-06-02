@@ -1,0 +1,28 @@
+PODS:
+  - GoogleMaps (3.1.0):
+    - GoogleMaps/Maps (= 3.1.0)
+  - GoogleMaps/Base (3.1.0)
+  - GoogleMaps/Maps (3.1.0):
+    - GoogleMaps/Base
+  - Pulsator (0.5.3)
+  - SnapKit (5.0.0)
+
+DEPENDENCIES:
+  - GoogleMaps
+  - Pulsator
+  - SnapKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - GoogleMaps
+    - Pulsator
+    - SnapKit
+
+SPEC CHECKSUMS:
+  GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
+  Pulsator: d58707c6827ec862cd89fd727424866795dabd24
+  SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
+
+PODFILE CHECKSUM: ee56652a6fe1d12633453362e4b8cb16ccc605b8
+
+COCOAPODS: 1.6.0.beta.2

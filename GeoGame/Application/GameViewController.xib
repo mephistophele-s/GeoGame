@@ -12,7 +12,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="GameViewController" customModule="GeoGame" customModuleProvider="target">
             <connections>
-                <outlet property="map" destination="kSk-DW-tal" id="gaj-Ja-Qlv"/>
+                <outlet property="mapView" destination="jgT-jz-5PZ" id="1aq-Gy-0Tu"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -21,12 +21,18 @@
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
-                <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="kSk-DW-tal">
-                    <rect key="frame" x="20" y="44" width="374" height="828"/>
-                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                </mapView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="jgT-jz-5PZ" customClass="GMSMapView">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="jgT-jz-5PZ" secondAttribute="bottom" constant="34" id="c74-in-RaT"/>
+                <constraint firstItem="jgT-jz-5PZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="eRV-RF-JeK"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="jgT-jz-5PZ" secondAttribute="trailing" id="mpa-0Z-abW"/>
+                <constraint firstItem="jgT-jz-5PZ" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="yt6-Fw-Khs"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="47.826086956521742" y="35.491071428571423"/>
         </view>

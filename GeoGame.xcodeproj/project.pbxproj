@@ -14,11 +14,12 @@
 		5D3A4860228C56ED00958E18 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5D3A485F228C56ED00958E18 /* Main.storyboard */; };
 		5D92291B2295B67F001D54B0 /* GameEngine.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D92291A2295B67F001D54B0 /* GameEngine.swift */; };
 		5D92291D2295B6E4001D54B0 /* Player.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5D92291C2295B6E4001D54B0 /* Player.swift */; };
-		5DAD0F2A229B1A68008956A0 /* PlayerAnnotation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAD0F29229B1A68008956A0 /* PlayerAnnotation.swift */; };
-		5DAD0F2C229B1F6D008956A0 /* PlayerMarkerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5DAD0F2B229B1F6D008956A0 /* PlayerMarkerView.swift */; };
+		846972EE22A39F3200C694A6 /* PlayerMapMarker.swift in Sources */ = {isa = PBXBuildFile; fileRef = 846972ED22A39F3200C694A6 /* PlayerMapMarker.swift */; };
+		F54BEEDDDC082C7918C22967 /* Pods_GeoGame.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70C688E76DE9A7A1D523A9C5 /* Pods_GeoGame.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		08F67ED435975FA1DE4B0C3D /* Pods-GeoGame.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoGame.release.xcconfig"; path = "Target Support Files/Pods-GeoGame/Pods-GeoGame.release.xcconfig"; sourceTree = "<group>"; };
 		5D3A4842228C4DEE00958E18 /* GeoGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GeoGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		5D3A4845228C4DEE00958E18 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		5D3A484C228C4DF000958E18 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -28,8 +29,9 @@
 		5D3A485F228C56ED00958E18 /* Main.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		5D92291A2295B67F001D54B0 /* GameEngine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameEngine.swift; sourceTree = "<group>"; };
 		5D92291C2295B6E4001D54B0 /* Player.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Player.swift; sourceTree = "<group>"; };
-		5DAD0F29229B1A68008956A0 /* PlayerAnnotation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerAnnotation.swift; sourceTree = "<group>"; };
-		5DAD0F2B229B1F6D008956A0 /* PlayerMarkerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMarkerView.swift; sourceTree = "<group>"; };
+		70C688E76DE9A7A1D523A9C5 /* Pods_GeoGame.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_GeoGame.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		7BE8057CB95746EF125FF593 /* Pods-GeoGame.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-GeoGame.debug.xcconfig"; path = "Target Support Files/Pods-GeoGame/Pods-GeoGame.debug.xcconfig"; sourceTree = "<group>"; };
+		846972ED22A39F3200C694A6 /* PlayerMapMarker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PlayerMapMarker.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -37,17 +39,28 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F54BEEDDDC082C7918C22967 /* Pods_GeoGame.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1FFF3D9B2D95AF08977C92ED /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70C688E76DE9A7A1D523A9C5 /* Pods_GeoGame.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		5D3A4839228C4DEE00958E18 = {
 			isa = PBXGroup;
 			children = (
 				5D3A4844228C4DEE00958E18 /* GeoGame */,
 				5D3A4843228C4DEE00958E18 /* Products */,
+				A1D463B5B5863E7CAC09F81F /* Pods */,
+				1FFF3D9B2D95AF08977C92ED /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -62,18 +75,58 @@
 		5D3A4844228C4DEE00958E18 /* GeoGame */ = {
 			isa = PBXGroup;
 			children = (
-				5D3A4845228C4DEE00958E18 /* AppDelegate.swift */,
-				5D3A485F228C56ED00958E18 /* Main.storyboard */,
-				5D3A485B228C55E000958E18 /* GameViewController.swift */,
-				5DAD0F29229B1A68008956A0 /* PlayerAnnotation.swift */,
-				5DAD0F2B229B1F6D008956A0 /* PlayerMarkerView.swift */,
-				5D92291A2295B67F001D54B0 /* GameEngine.swift */,
-				5D92291C2295B6E4001D54B0 /* Player.swift */,
-				5D3A485C228C55E000958E18 /* GameViewController.xib */,
-				5D3A484C228C4DF000958E18 /* Assets.xcassets */,
+				846972F022A3AC5700C694A6 /* Services */,
+				846972EF22A3AC4C00C694A6 /* Models */,
+				846972EC22A39F2300C694A6 /* Main */,
+				846972E722A2CCCA00C694A6 /* Application */,
 				5D3A4851228C4DF000958E18 /* Info.plist */,
 			);
 			path = GeoGame;
+			sourceTree = "<group>";
+		};
+		846972E722A2CCCA00C694A6 /* Application */ = {
+			isa = PBXGroup;
+			children = (
+				5D3A484C228C4DF000958E18 /* Assets.xcassets */,
+				5D3A485C228C55E000958E18 /* GameViewController.xib */,
+				5D3A4845228C4DEE00958E18 /* AppDelegate.swift */,
+				5D3A485F228C56ED00958E18 /* Main.storyboard */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		846972EC22A39F2300C694A6 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				5D3A485B228C55E000958E18 /* GameViewController.swift */,
+				846972ED22A39F3200C694A6 /* PlayerMapMarker.swift */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		846972EF22A3AC4C00C694A6 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				5D92291C2295B6E4001D54B0 /* Player.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		846972F022A3AC5700C694A6 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				5D92291A2295B67F001D54B0 /* GameEngine.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		A1D463B5B5863E7CAC09F81F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				7BE8057CB95746EF125FF593 /* Pods-GeoGame.debug.xcconfig */,
+				08F67ED435975FA1DE4B0C3D /* Pods-GeoGame.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,9 +136,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 5D3A4854228C4DF000958E18 /* Build configuration list for PBXNativeTarget "GeoGame" */;
 			buildPhases = (
+				8D059BD25DEB14A4C1C83E5F /* [CP] Check Pods Manifest.lock */,
 				5D3A483E228C4DEE00958E18 /* Sources */,
 				5D3A483F228C4DEE00958E18 /* Frameworks */,
 				5D3A4840228C4DEE00958E18 /* Resources */,
+				80E6AD0C800B339287774370 /* [CP] Embed Pods Frameworks */,
+				5E68B5778C1FE58802598328 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -142,15 +198,85 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		5E68B5778C1FE58802598328 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeoGame/Pods-GeoGame-resources.sh",
+				"${PODS_ROOT}/GoogleMaps/Maps/Frameworks/GoogleMaps.framework/Resources/GoogleMaps.bundle",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/GoogleMaps.bundle",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeoGame/Pods-GeoGame-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		80E6AD0C800B339287774370 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-GeoGame/Pods-GeoGame-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Pulsator/Pulsator.framework",
+				"${BUILT_PRODUCTS_DIR}/SnapKit/SnapKit.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Pulsator.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SnapKit.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-GeoGame/Pods-GeoGame-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8D059BD25DEB14A4C1C83E5F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-GeoGame-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		5D3A483E228C4DEE00958E18 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				5DAD0F2A229B1A68008956A0 /* PlayerAnnotation.swift in Sources */,
 				5D92291D2295B6E4001D54B0 /* Player.swift in Sources */,
-				5DAD0F2C229B1F6D008956A0 /* PlayerMarkerView.swift in Sources */,
 				5D3A4846228C4DEE00958E18 /* AppDelegate.swift in Sources */,
+				846972EE22A39F3200C694A6 /* PlayerMapMarker.swift in Sources */,
 				5D92291B2295B67F001D54B0 /* GameEngine.swift in Sources */,
 				5D3A485D228C55E000958E18 /* GameViewController.swift in Sources */,
 			);
@@ -277,6 +403,7 @@
 		};
 		5D3A4855228C4DF000958E18 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7BE8057CB95746EF125FF593 /* Pods-GeoGame.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -294,6 +421,7 @@
 		};
 		5D3A4856228C4DF000958E18 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 08F67ED435975FA1DE4B0C3D /* Pods-GeoGame.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
