@@ -6,4 +6,5 @@ target 'GeoGame' do
  pod 'Pulsator'
  pod 'GoogleMaps'
  pod 'SnapKit'
+ pod 'Closures'
 end

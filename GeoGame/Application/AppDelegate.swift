@@ -18,8 +18,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         GMSServices.provideAPIKey("AIzaSyDN22WSS2ZNbI_9sy2JIyOs3yJvvRYaZO8")
         
-        self.window?.rootViewController = GameViewController()
-        self.window?.makeKeyAndVisible()
+        window = UIWindow(frame: UIScreen.main.bounds)
+        window?.rootViewController = GameViewController()
+        window?.makeKeyAndVisible()
         return true
     }
 }

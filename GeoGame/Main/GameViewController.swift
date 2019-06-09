@@ -13,6 +13,8 @@ import GoogleMaps
 
 class GameViewController: UIViewController {
     
+    private let contentView = GameView()
+
     let locationManager = CLLocationManager()
     let regionRadius: CLLocationDistance = 600
     
@@ -21,12 +23,17 @@ class GameViewController: UIViewController {
     let engine = GameEngine()
     
     var markers: [PlayerMapMarker] = []
-
-    @IBOutlet weak var mapView: GMSMapView!
     
+    override func loadView() {
+        view = contentView
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
-        mapView.delegate = self
+        setupInitialLocation()
+        contentView.delegate = self
+        contentView.mapView.delegate = self
+        contentView.mapView.setMinZoom(16, maxZoom: 16)
         setupLocationManager()
         updatePlayers()
         
@@ -61,7 +68,7 @@ class GameViewController: UIViewController {
             
             marker.iconView = markerView
             marker.tracksViewChanges = true
-            marker.map = mapView
+            marker.map = contentView.mapView
             
             markers.append(marker)
         }
@@ -69,7 +76,7 @@ class GameViewController: UIViewController {
     
     func centerMapOnLocation(location: CLLocation) {
         let camera = GMSCameraPosition(target: location.coordinate, zoom: 16)
-        mapView.animate(to: camera)
+        contentView.mapView.animate(to: camera)
     }
 }
 
@@ -87,6 +94,11 @@ extension GameViewController: CLLocationManagerDelegate {
         
         let player = makePlayer(with: mockedLocation.coordinate)
         engine.synchronize(player: player)
+    }
+
+    private func setupInitialLocation() {
+        let mockedLocation = CLLocation(latitude: 50.442029, longitude: 30.4410228)
+        centerMapOnLocation(location: mockedLocation)
     }
 }
 
@@ -125,5 +137,11 @@ extension GameViewController {
             
             marker.position = position
         }
+    }
+}
+
+extension GameViewController: GameViewDelegate {
+    func didTapPauseButton() {
+        contentView.toggleTimer()
     }
 }
