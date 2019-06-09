@@ -5,12 +5,14 @@ PODS:
   - GoogleMaps/Base (3.1.0)
   - GoogleMaps/Maps (3.1.0):
     - GoogleMaps/Base
+  - GTProgressBar (0.3.3)
   - Pulsator (0.5.3)
   - SnapKit (5.0.0)
 
 DEPENDENCIES:
   - Closures
   - GoogleMaps
+  - GTProgressBar
   - Pulsator
   - SnapKit
 
@@ -18,15 +20,17 @@ SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - Closures
     - GoogleMaps
+    - GTProgressBar
     - Pulsator
     - SnapKit
 
 SPEC CHECKSUMS:
   Closures: 7477e86502e33d7ae435b8c60ce219390e06c476
   GoogleMaps: 5c13302e6fe6bb6e686b267196586b91cd594225
+  GTProgressBar: a480283ecb0ada50de16c71e634892826928f640
   Pulsator: d58707c6827ec862cd89fd727424866795dabd24
   SnapKit: fd22d10eb9aff484d79a8724eab922c1ddf89bcf
 
-PODFILE CHECKSUM: f88e6aa249e6613bb11b8a448683ac88c1499217
+PODFILE CHECKSUM: da87623e087118de50e9b35c0b13932474c1761f
 
 COCOAPODS: 1.6.0.beta.2

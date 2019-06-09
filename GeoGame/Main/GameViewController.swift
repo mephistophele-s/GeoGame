@@ -144,4 +144,24 @@ extension GameViewController: GameViewDelegate {
     func didTapPauseButton() {
         contentView.toggleTimer()
     }
+    
+    func didTapAttackButton() {
+        let marker = markers[0]
+        guard let markerView = marker.iconView as? PlayerMapMarkerView else { return }
+        contentView.mapView.camera = GMSCameraPosition(target: marker.position, zoom: 16)
+        
+        let closest = closestMarker(to: marker)
+        guard let closestView = closest.iconView as? PlayerMapMarkerView else { return }
+        
+        closestView.togglePulsator()
+        markerView.togglePulsator()
+    }
+    
+    private func closestMarker(to marker: PlayerMapMarker) -> PlayerMapMarker {
+        let filtered = markers.filter { $0.player.team != marker.player.team }
+        let closest = filtered.sorted (by: { (m1, m2) -> Bool in
+            return m1.position.distance(to: marker.position) < m2.position.distance(to: marker.position)
+        })[0]
+        return closest
+    }
 }

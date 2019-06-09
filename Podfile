@@ -7,4 +7,5 @@ target 'GeoGame' do
  pod 'GoogleMaps'
  pod 'SnapKit'
  pod 'Closures'
+ pod 'GTProgressBar'
 end

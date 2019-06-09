@@ -23,3 +23,12 @@ enum Team {
     
     case green, red
 }
+
+extension CLLocationCoordinate2D {
+    
+    func distance(to point: CLLocationCoordinate2D) -> Double {
+        let a = (self.latitude - point.latitude) * (self.latitude - point.latitude)
+        let b = (self.longitude - point.longitude) * (self.longitude - point.longitude)
+        return sqrt(a + b)
+    }
+}
